@@ -1,5 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { reducer as counterReducer } from "./counter";
+import { counterReducer } from "./counter";
 
 
 

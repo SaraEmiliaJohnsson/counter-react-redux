@@ -1,17 +1,33 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
 
 
-const increase = createAction('increase counter');
-const decrease = createAction('decrease counter');
+const increaseStitch = createAction('increase stitch counter');
+const decreaseStitch = createAction('decrease stitch counter');
 
-const actions = { increase, decrease };
+const increaseRow = createAction('increase row counter');
+const decreaseRow = createAction('decrease row counter');
 
-const initialState: number = 0;
+const actions = { increaseStitch, decreaseStitch, increaseRow, decreaseRow };
 
-const reducer = createReducer(initialState, builder => {
+const initialState = {
+    stitches: 0,
+    rows: 0
+};
+
+const counterReducer = createReducer(initialState, builder => {
     builder
-        .addCase(increase, (state, action) => state + 1)
-        .addCase(decrease, (state, action) => state - 1);
+        .addCase(increaseStitch, state => {
+            state.stitches += 1;
+        })
+        .addCase(decreaseStitch, state => {
+            state.stitches -= 1;
+        })
+        .addCase(increaseRow, state => {
+            state.rows += 1;
+        })
+        .addCase(decreaseRow, state => {
+            state.rows -= 1;
+        });
 })
 
-export { actions, reducer };
+export { actions, counterReducer };
