@@ -11,11 +11,9 @@ const RowCounter = () => {
 
     return (
         <section>
-
+            <h2>Row Counter</h2>
             <button onClick={handleRowPlus}>+</button>
             <button onClick={handleRowMinus}>-</button>
-            <h3>Row Counter</h3>
-
         </section>
     )
 }

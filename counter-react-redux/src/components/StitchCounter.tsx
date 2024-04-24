@@ -11,11 +11,9 @@ const StitchCounter = () => {
 
     return (
         <section>
-
+            <h2>Stitch Counter</h2>
             <button onClick={handleStitchPlus}>+</button>
             <button onClick={handleStitchMinus}>-</button>
-            <h3>Stitch Counter</h3>
-
         </section>
     )
 }

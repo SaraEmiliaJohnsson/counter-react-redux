@@ -12,10 +12,12 @@ function App() {
   return (
     <>
       <section className="counter-container">
-        {rows}
+
         <RowCounter />
-        {stitches}
+        {rows}
+
         <StitchCounter />
+        {stitches}
       </section>
     </>
   )
