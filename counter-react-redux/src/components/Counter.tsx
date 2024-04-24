@@ -12,7 +12,7 @@ const Counter = () => {
     return (
         <section>
             <button onClick={handlePlus}>+</button>
-            <button onClick={handleMinus}>+</button>
+            <button onClick={handleMinus}>-</button>
         </section>
     )
 }
